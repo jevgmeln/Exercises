@@ -19,7 +19,19 @@ public class Logic1
     /// </summary>
     public bool CigarParty(int cigars, bool isWeekend)
     {
-        throw new NotImplementedException();
+
+        if (cigars >= 40 && cigars <= 60)
+        {
+            return true;
+        }
+
+        if (cigars >= 40 && isWeekend)
+        {
+            return true;
+        }
+
+
+        return false;
     }
 
     /// <summary>
