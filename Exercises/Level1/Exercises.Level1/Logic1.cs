@@ -48,7 +48,18 @@ public class Logic1
     /// </summary>
     public int DateFashion(int you, int date)
     {
-        throw new NotImplementedException();
+
+        if (you <= 2 || date <= 2)
+        {
+            return 0;
+        }
+
+        if (you >=8 || date >= 8)
+        {
+            return 2;
+        }
+
+        return 1;
     }
 
     /// <summary>
@@ -63,7 +74,12 @@ public class Logic1
     /// </summary>
     public bool SquirrelPlay(int temp, bool isSummer)
     {
-        throw new NotImplementedException();
+        if (temp >=60 && (temp <=90 || temp <=100 && isSummer))
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
@@ -79,7 +95,19 @@ public class Logic1
     /// </summary>
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
-        throw new NotImplementedException();
+        if (speed <= 60 || (speed <= 65 && isBirthday))
+        {
+            return 0;
+        }
+        else if (speed > 61 && (speed <= 80 || (speed <= 85 && isBirthday)))
+        {
+            return 1;
+        }
+        else
+        {
+            return 2;
+        }
+
     }
 
     /// <summary>
