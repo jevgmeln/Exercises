@@ -120,7 +120,12 @@ public class Logic1
     /// </summary>
     public int SortaSum(int a, int b)
     {
-        throw new NotImplementedException();
+        int result = a + b;
+        if (result >= 10 && result < 20)
+        {
+            return 20;
+        }
+        else return result;
     }
 
     /// <summary>
@@ -136,7 +141,22 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
-        throw new NotImplementedException();
+        if ((day == 1 || day == 2 || day == 3 || day == 4 || day == 5) && vacation)
+        {
+            return "10:00";
+        }
+        else if (day == 1 || day == 2 || day == 3 || day == 4 || day == 5)
+        {
+            return "7:00";
+        }
+        else if ((day == 6 || day == 0) && vacation)
+        {
+            return "off";
+        }
+        else
+        {
+            return "10:00";
+        }
     }
 
     /// <summary>
@@ -150,7 +170,19 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-        throw new NotImplementedException();
+        if (a == 6 || b == 6)
+        {
+            return true;
+        }
+        else if (a + b == 6)
+        {
+            return true;
+        }
+        else if ((a - b == 6) || (b - a == 6))
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
