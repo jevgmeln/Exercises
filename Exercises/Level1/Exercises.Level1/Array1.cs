@@ -37,7 +37,16 @@ public class Array1
     /// </summary>
     public bool SameFirstLast(int[] nums)
     {
-        throw new NotImplementedException();
+        int first = nums[0];
+        int lastIndex = nums.Length - 1;
+        int last = nums[lastIndex];
+
+        if (nums.Length >= 1 && first == last)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>
