@@ -44,7 +44,17 @@ public class Array2
     /// </summary>
     public int BigDiff(int[] nums)
     {
-        throw new NotImplementedException();
+        int large = nums[0];
+        int small = nums[0];
+
+        foreach (int num in nums)
+        {
+            large = Math.Max(large, num);
+            small = Math.Min(small, num);
+        }
+
+        int result = large - small;
+        return result;
     }
 
     /// <summary>

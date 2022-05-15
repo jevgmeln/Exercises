@@ -59,7 +59,9 @@ public class Array1
     /// </summary>
     public int[] MakePi()
     {
-        throw new NotImplementedException();
+        int[] Pi = { 3, 1, 4 };
+
+        return Pi;
     }
 
     /// <summary>
@@ -72,7 +74,21 @@ public class Array1
     /// </summary>
     public bool CommonEnd(int[] a, int[] b)
     {
-        throw new NotImplementedException();
+        int firstInA = a[0];
+        int lastInAIndex = a.Length - 1;
+        int lastInA = a[lastInAIndex];
+
+        int firstInB = b[0];
+        int lastInBIndex = b.Length - 1;
+        int lastInB = b[lastInBIndex];
+
+        if (firstInA == firstInB || lastInA == lastInB)
+        {
+            return true;
+        }
+
+        return false;
+
     }
 
     /// <summary>
@@ -84,7 +100,14 @@ public class Array1
     /// </summary>
     public int Sum3(int[] nums)
     {
-        throw new NotImplementedException();
+        int result = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            result += nums[i];
+        }
+
+        return result;
     }
 
     /// <summary>
@@ -97,7 +120,18 @@ public class Array1
     /// </summary>
     public int[] RotateLeft3(int[] nums)
     {
-        throw new NotImplementedException();
+
+        int[] numbers = { 0, 0, 0};
+
+        foreach (int num in nums)
+        {
+            numbers[0] = nums[1];
+            numbers[1] = nums[2];
+            numbers[2] = nums[0];
+
+        }
+
+        return numbers;
     }
 
     /// <summary>
@@ -110,7 +144,17 @@ public class Array1
     /// </summary>
     public int[] Reverse3(int[] nums)
     {
-        throw new NotImplementedException();
+        int[] numbers = new int [3];
+
+        foreach (int num in nums)
+        {
+            numbers[2] = nums[0];
+            numbers[1] = nums[1];
+            numbers[0] = nums[2];
+
+        }
+
+        return numbers;
     }
 
     /// <summary>
@@ -123,7 +167,14 @@ public class Array1
     /// </summary>
     public int[] MaxEnd3(int[] nums)
     {
-        throw new NotImplementedException();
+        int large = Math.Max(nums[0], nums[2]);
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            nums[i] = large;
+        }
+
+        return nums;
     }
 
     /// <summary>
@@ -137,7 +188,16 @@ public class Array1
     /// </summary>
     public int Sum2(int[] nums)
     {
-        throw new NotImplementedException();
+        if (nums.Length >= 2)
+        {
+            return nums[0] + nums[1];
+        }
+        else if (nums.Length == 1)
+        {
+            return nums[0];
+        }
+
+            return 0;
     }
 
     /// <summary>
